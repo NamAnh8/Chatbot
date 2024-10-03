@@ -4,7 +4,7 @@ from pypdf import PdfReader
 import os, time
 
 headers = {
-    "authorization": st.secrets["api_key"],
+    "authorization": st.secrets["API_KEY"],
     "content-type": "application/json"
 }
 # Đường dẫn đến thư mục tạm
