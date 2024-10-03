@@ -3,6 +3,10 @@ import google.generativeai as genai
 from pypdf import PdfReader
 import os, time
 
+headers = {
+    "authorization": st.secrets["api_key"],
+    "content-type": "application/json"
+}
 # Đường dẫn đến thư mục tạm
 temp_dir = 'temp_uploaded_files'  # Tạo thư mục tạm ngay trong ứng dụng
 
@@ -235,5 +239,4 @@ def main():
 
 
 if __name__ == '__main__':
-    genai.configure(api_key="AIzaSyCmFOlfEkRB3mRxTLWPOxF96VdfNh-5j5w")
     main()
